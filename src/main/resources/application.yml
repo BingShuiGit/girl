@@ -1,0 +1,14 @@
+spring:
+  profiles:
+    active: prod
+
+  datasource:                   #配置MySQL
+    driver-class-name: com.mysql.jdbc.Driver       #配置MySQL驱动
+    url: jdbc:mysql://127.0.0.1:3306/dbgirl         #数据库url
+    username: root
+    password: root
+
+  jpa:                                     #配置jpa
+    hibernate:
+      ddl-auto: updata             # create自动根据@Entity自动创建表，如表已存在，自动清空数据，创建空表
+    show-sql: true                 #使得可在控制台看到执行的sql语句，方便调试
